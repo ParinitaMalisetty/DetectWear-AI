@@ -31,15 +31,15 @@ Existing CCTV surveillance systems rely heavily on manual monitoring, which is i
 1. It first detects humans in the surveillance feed.
 2. It then restricts number recognition *exclusively* to the detected human regions.
 
-This context-aware filtering drastically reduces false positives, ensuring that only valid worker identification numbers are logged and verified.[cite: 1, 2]
+This context-aware filtering drastically reduces false positives, ensuring that only valid worker identification numbers are logged and verified.
 
 ---
 
 ## ✨ Key Features
 
 - **🎯 Context-Aware Detection:** Combines human detection and number recognition to ignore background text and machinery labels.
-- **🚨 Automated Compliance Alerts:** Generates real-time, on-screen warnings when a detected person is missing a visible identification number.[cite: 1, 2]
-- **📸 Evidence Logging:** Automatically captures snapshots of non-compliant individuals and maintains a detailed CSV incident log.[cite: 1, 2]
+- **🚨 Automated Compliance Alerts:** Generates real-time, on-screen warnings when a detected person is missing a visible identification number.
+- **📸 Evidence Logging:** Automatically captures snapshots of non-compliant individuals and maintains a detailed CSV incident log.
 - **🖥️ Interactive GUI:** A CustomTkinter-based dashboard for uploading videos, connecting live CCTV/RTSP streams, and viewing dual-feed (original vs. processed) video.
 - **📊 Real-Time Analytics:** Displays live statistics including FPS, detected humans, recognized jerseys, and compliance alert counts.
 - **💾 Output Management:** Supports exporting processed feeds as MP4 videos and downloading alert logs as CSV files.
@@ -50,25 +50,25 @@ This context-aware filtering drastically reduces false positives, ensuring that 
 
 The pipeline processes video streams sequentially for high accuracy and efficiency:
 
-1. **Video Stream Acquisition:** Ingests live CCTV/RTSP streams or pre-recorded video files.[cite: 1, 2]
+1. **Video Stream Acquisition:** Ingests live CCTV/RTSP streams or pre-recorded video files.
 2. **Human Localization:** Uses **YOLOv8n** to extract bounding boxes around human subjects.
 3. **ROI Extraction:** Crops the human regions to isolate the worker.
-4. **Number Recognition:** Analyzes the cropped region using **YOLO11n** to detect wearable numbers.[cite: 1]
-5. **Compliance Verification:** Checks for the presence of the number; if missing, triggers the Alert Generation Pipeline.[cite: 1]
-6. **Visualization:** Overlays bounding boxes, IDs, and alert status on the live UI.[cite: 1, 2]
+4. **Number Recognition:** Analyzes the cropped region using **YOLO11n** to detect wearable numbers.
+5. **Compliance Verification:** Checks for the presence of the number; if missing, triggers the Alert Generation Pipeline.
+6. **Visualization:** Overlays bounding boxes, IDs, and alert status on the live UI.
 
-*(Note: Add your architecture diagram here by uploading it to your repo and updating the image path)*
-`![Architecture Diagram](path/to/your/architecture_diagram.png)`
+<img width="351" height="622" alt="image" src="https://github.com/user-attachments/assets/5ccab168-edb5-4924-91e2-02fbb06cdde7" />
+
 
 ---
 
 ## 🛠️ Built With
 
-- **[Python](https://www.python.org/):** Core system programming.[cite: 1]
-- **[OpenCV](https://opencv.org/):** Video processing and frame manipulation.[cite: 1]
-- **[Ultralytics YOLO](https://github.com/ultralytics/ultralytics):** YOLOv8n (Human Detection) & YOLO11n (Wearable Number Detection).[cite: 1]
-- **[PyTorch](https://pytorch.org/):** GPU-accelerated model inference.[cite: 1]
-- **[CustomTkinter](https://github.com/TomSchimansky/CustomTkinter):** Modern, interactive GUI development.[cite: 1]
+- **[Python](https://www.python.org/):** Core system programming.
+- **[OpenCV](https://opencv.org/):** Video processing and frame manipulation.
+- **[Ultralytics YOLO](https://github.com/ultralytics/ultralytics):** YOLOv8n (Human Detection) & YOLO11n (Wearable Number Detection).
+- **[PyTorch](https://pytorch.org/):** GPU-accelerated model inference.
+- **[CustomTkinter](https://github.com/TomSchimansky/CustomTkinter):** Modern, interactive GUI development.
 
 ---
 
