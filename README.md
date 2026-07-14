@@ -97,6 +97,8 @@ pip install -r requirements.txt
 ```
 Ensure your trained models (yolov8n.pt and yolo11n.pt) are placed in the models/ directory as structured in the codebase.
 
+---
+
 ### 💻 Usage
 1. Launch the interactive GUI application:
 ```bash
