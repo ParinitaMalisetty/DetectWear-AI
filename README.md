@@ -19,8 +19,7 @@ This project was developed as a technical initiative during an internship at the
 - [Built With](#-built-with)
 - [Getting Started](#-getting-started)
 - [Usage](#-usage)
-- [Future Scope](#-future-scope)
-- [Acknowledgements](#-acknowledgements)
+
 
 ---
 
